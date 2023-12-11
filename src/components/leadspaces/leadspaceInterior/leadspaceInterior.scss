@@ -1,0 +1,101 @@
+@use '../../../scss/utility/component-palettes.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/reset.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/variables/breakpoints.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/grid.scss';
+@use '~@kyndryl-design-system/shidoka-foundation/scss/utility/typography.scss';
+
+// Component container(s)
+// --------------------------------------------------------------
+.kd-leadspace-interior {
+	background: var(--kd-color-background-ui-default);
+	color: var(--kd-color-text-primary);
+}
+
+// Component grid
+.kd-leadspace-interior-grid {
+	position: relative;
+	row-gap: 0;
+}
+
+// Media column
+// -------------------------------
+.kd-leadspace-interior-media-col {
+	position: relative;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		justify-self: end;
+
+		.layout-option-2 & {
+			justify-self: auto;
+			order: 1;
+		}
+	}
+}
+
+// Media container
+.kd-leadspace-interior-media-container {
+	height: 100%;
+	position: relative;
+	width: 100vw;
+
+	@media (min-width: breakpoints.$bp-lg) {
+		width: 50vw;
+	}
+}
+
+// Force slot to fill media container
+::slotted(div[slot="media"]) {
+	height: 100%;
+}
+
+// Video modal CTA
+.kd-leadspace-interior-media-cta {
+	bottom: var(--kd-spacing-48);
+	position: absolute;
+	right: var(--kd-page-gutter);
+
+	@media (min-width: breakpoints.$bp-md) {
+		right: var(--kd-spacing-32);
+	}
+
+	@media (min-width: breakpoints.$bp-lg) {
+		right: var(--kd-spacing-48);
+	}
+
+	.layout-option-2 & {
+		right: var(--kd-page-gutter);
+	}
+}
+
+// Content column
+// -------------------------------
+.kd-leadspace-interior-content-col {
+	padding: var(--kd-spacing-64) var(--kd-page-gutter);
+
+	@media (min-width: breakpoints.$bp-lg) {
+		padding-left: var(--kd-spacing-32);
+		padding-right: var(--kd-spacing-32);
+
+		.layout-option-2 & {
+			order: 0;
+		}
+	}
+
+	@media (min-width: breakpoints.$bp-xl) {
+		padding-left: var(--kd-spacing-48);
+		padding-right: var(--kd-spacing-48);
+	}
+
+	@media (min-width: breakpoints.$bp-max) {
+		padding-left: var(--kd-spacing-40);
+		padding-right: var(--kd-spacing-40);
+	}
+}
+
+.kd-leadspace-interior-title {
+	margin-bottom: var(--kd-spacing-24);
+}
+
+kd-link {
+	margin-top: var(--kd-spacing-40);
+}

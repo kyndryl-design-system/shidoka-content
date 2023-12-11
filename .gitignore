@@ -13,3 +13,6 @@ coverage
 
 # IDE
 .idea
+
+# File system
+.DS_Store

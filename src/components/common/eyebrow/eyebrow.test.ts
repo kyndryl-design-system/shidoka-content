@@ -1,4 +1,4 @@
-import { Eyebrow } from '../../../dist/index';
+import { Eyebrow } from '../../../../dist/index';
 
 import { assert } from '@open-wc/testing';
 

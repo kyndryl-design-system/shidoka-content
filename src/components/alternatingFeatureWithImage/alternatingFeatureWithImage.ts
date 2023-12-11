@@ -12,7 +12,7 @@ import '@kyndryl-design-system/shidoka-foundation/components/icon';
 import '@kyndryl-design-system/shidoka-foundation/components/link';
 import chevronRightIcon from '@carbon/icons/es/chevron--right/16';
 import stylesheet from './alternatingFeatureWithImage.scss';
-import '../eyebrow/eyebrow';
+import '../common/eyebrow/eyebrow';
 
 @customElement('kd-alternating-feature-with-image')
 export class AlternatingFeatureWithImage extends LitElement {

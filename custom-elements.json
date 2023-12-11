@@ -12,7 +12,15 @@
           "name": "Eyebrow",
           "declaration": {
             "name": "Eyebrow",
-            "module": "./components/eyebrow"
+            "module": "./components/common/eyebrow"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "SpacerLine",
+          "declaration": {
+            "name": "SpacerLine",
+            "module": "./components/common/spacerLine"
           }
         },
         {
@@ -45,6 +53,14 @@
           "declaration": {
             "name": "PersistentCta",
             "module": "./components/callToAction/persistentCta"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "./components/leadspaces/leadspaceInterior"
           }
         }
       ]
@@ -387,55 +403,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/eyebrow/eyebrow.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Eyebrow",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Eyebrow",
-          "declaration": {
-            "name": "Eyebrow",
-            "module": "src/components/eyebrow/eyebrow.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "declaration": {
-            "name": "Eyebrow",
-            "module": "src/components/eyebrow/eyebrow.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/eyebrow/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Eyebrow",
-          "declaration": {
-            "name": "Eyebrow",
-            "module": "./eyebrow"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/callToAction/persistentCta/index.ts",
       "declarations": [],
       "exports": [
@@ -591,6 +558,326 @@
           "declaration": {
             "name": "PersistentCta",
             "module": "src/components/callToAction/persistentCta/persistentCta.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/common/eyebrow/eyebrow.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Eyebrow",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Eyebrow",
+          "declaration": {
+            "name": "Eyebrow",
+            "module": "src/components/common/eyebrow/eyebrow.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "Eyebrow",
+            "module": "src/components/common/eyebrow/eyebrow.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/common/eyebrow/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Eyebrow",
+          "declaration": {
+            "name": "Eyebrow",
+            "module": "./eyebrow"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/common/spacerLine/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SpacerLine",
+          "declaration": {
+            "name": "SpacerLine",
+            "module": "./spacerLine"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/common/spacerLine/spacerLine.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SpacerLine",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SpacerLine",
+          "declaration": {
+            "name": "SpacerLine",
+            "module": "src/components/common/spacerLine/spacerLine.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "SpacerLine",
+            "module": "src/components/common/spacerLine/spacerLine.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaces/leadspaceInterior/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaces/leadspaceInterior/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "./leadspaceInterior"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "LeadspaceInterior",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n\targs,\n\trender: ({...args}) => {\n\t\treturn html`\n\t\t\t<kd-leadspace-interior\n\t\t\t\tcolorPalette=\"${args.colorPalette}\"\n\t\t\t\tmediaPosition=\"${args.mediaPosition}\"\n\t\t\t\theadlineText=\"${args.headlineText}\"\n\t\t\t\teyebrowText=\"${args.eyebrowText}\"\n\t\t\t\tprimaryCtaText=\"${args.primaryCtaText}\"\n\t\t\t\tprimaryCtaLink=\"${args.primaryCtaLink}\"\n\t\t\t\tsecondaryCtaText=\"${args.secondaryCtaText}\"\n\t\t\t>\n\t\t\t\t<div slot=\"media\">\n\t\t\t\t\t<img\n\t\t\t\t\t\tsrc=\"https://s7d1.scene7.com/is/image/kyndryl/sky_whitebridge_1x1?qlt=100\"\n\t\t\t\t\t\talt=\"image alt text\"\n\t\t\t\t\t\tclass=\"kd-layout__aspect-ratio--1x1 kd-layout__object-fit--cover\"\n\t\t\t\t\t/>\n\t\t\t\t</div>\n\t\t\t\t<div slot=\"description\">\n\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor feugiat non sem eget libero. Risus semper facilisis convallis vitae.</p>\n\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu facilisi pellentesque morbi molestie sed ut at sed ac. Semper tortor feugiat non sem eget libero. Risus semper facilisis convallis vitae.</p>\n\t\t\t\t</div>\n\t\t\t</kd-leadspace-interior>\n\t\t`;\n\t}\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LeadspaceInterior",
+          "members": [
+            {
+              "kind": "field",
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "attribute": "colorPalette"
+            },
+            {
+              "kind": "field",
+              "name": "mediaPosition",
+              "type": {
+                "text": "string"
+              },
+              "description": "Media on the left or right.",
+              "attribute": "mediaPosition"
+            },
+            {
+              "kind": "field",
+              "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Eyebrow text.",
+              "attribute": "eyebrowText"
+            },
+            {
+              "kind": "field",
+              "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title.",
+              "attribute": "headlineText"
+            },
+            {
+              "kind": "field",
+              "name": "primaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA text.",
+              "attribute": "primaryCtaText"
+            },
+            {
+              "kind": "field",
+              "name": "primaryCtaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA link.",
+              "attribute": "primaryCtaLink"
+            },
+            {
+              "kind": "field",
+              "name": "secondaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Secondary Video CTA text.",
+              "attribute": "secondaryCtaText"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "colorPalette",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Global Color Palette",
+              "fieldName": "colorPalette"
+            },
+            {
+              "name": "mediaPosition",
+              "type": {
+                "text": "string"
+              },
+              "description": "Media on the left or right.",
+              "fieldName": "mediaPosition"
+            },
+            {
+              "name": "eyebrowText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Eyebrow text.",
+              "fieldName": "eyebrowText"
+            },
+            {
+              "name": "headlineText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Component title.",
+              "fieldName": "headlineText"
+            },
+            {
+              "name": "primaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA text.",
+              "fieldName": "primaryCtaText"
+            },
+            {
+              "name": "primaryCtaLink",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Primary CTA link.",
+              "fieldName": "primaryCtaLink"
+            },
+            {
+              "name": "secondaryCtaText",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "Secondary Video CTA text.",
+              "fieldName": "secondaryCtaText"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "kd-leadspace-interior",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LeadspaceInterior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "kd-leadspace-interior",
+          "declaration": {
+            "name": "LeadspaceInterior",
+            "module": "src/components/leadspaces/leadspaceInterior/leadspaceInterior.ts"
           }
         }
       ]
