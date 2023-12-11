@@ -8,6 +8,7 @@ import postcss from 'rollup-plugin-postcss';
 import litcss from 'rollup-plugin-postcss-lit';
 import InlineSvg from 'rollup-plugin-inline-svg';
 import copy from 'rollup-plugin-copy';
+import alias from '@rollup/plugin-alias';
 
 export default {
   input: ['./src/**/index.ts'],
@@ -38,5 +39,13 @@ export default {
     }),
     litcss(),
     terser(),
+    alias({
+      entries: [
+        { find: 'common', replacement: './src/common' },
+        { find: 'components', replacement: './src/components' },
+        { find: 'scss', replacement: './src/scss' },
+        { find: 'stories', replacement: './src/stories' },
+      ]
+    })
   ],
 };

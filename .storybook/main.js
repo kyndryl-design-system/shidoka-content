@@ -1,4 +1,5 @@
 import remarkGfm from 'remark-gfm';
+import * as path from 'path';
 
 export default {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -79,5 +80,12 @@ export default {
   },
   docs: {
     autodocs: true,
+  },
+  webpackFinal: async (config) => {
+    config.resolve.modules = [
+      ...(config.resolve.modules || []),
+      path.resolve(__dirname, '../src'),
+    ];
+    return config;
   },
 };
